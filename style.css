@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    padding:0 50px;
+    box-shadow: 0px 8px 24px 0px rgba(255,255,0,0.63);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #110F00;
+    z-index: 1;
+}
+
+.header img{
+    height: 70px;
+    border-radius: 100%;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 80px;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color: #F3F3F1;
+    font-weight: 300;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar i{
+    font-size: 36px;
+    display: none;
+    color: #FFFF00;
+}
+
+#toggle-menu{
+    display: none;
+}
+
+/* main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hero */
+
+#hero{
+    margin-top: 80px;
+    display: flex;
+    padding: 70px 0px;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.hero-inicial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero-inicial h1{
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    color: #110F00;
+}
+
+.hero-inicial p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 350px;
+    color: #110F00;
+}
+
+.button-container{
+    display: flex;
+    gap: 15px;
+}
+
+.button-container a{
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: 600s;
+}
+
+.primary-btn{
+    background-color:#FFFF00;
+    color: #110F00;
+}
+
+.alt-btn{
+    background-color: #110F00;
+    color:#FFFF00;
+}
+
+.hero-img{
+    width: 700px;
+}
+
+
+/* about */
+
+
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 850px;
+    padding: 30px 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* mediaquery */
+
+@media (max-width:992px){
+    .hero-inicial{
+        text-align: center;
+        width: 90%;
+        align-items: center;
+    }
+
+    .hero-inicial h1{
+        display: block;
+        width: 100%;
+    }
+
+    .hero-inicial p{
+        max-width: 80%;
+        font-size: 1rem;
+    }
+
+    .button-container{
+        justify-content: center;
+    }
+
+    .hero-img{
+        display: none;
+    }
+
+    #about{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:576px) {
+    .navbar ul{
+        background-color: #110F00;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.7s ease-out;
+    }
+
+    .navbar i{
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .navbar-list{
+        transform: translateX(0%);
+        transition: all 0.7s ease-in;
+    }
+
+    .hero-inicial p{
+        max-width: 100%;
+    }
+}
+
+
